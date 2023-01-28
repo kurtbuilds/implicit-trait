@@ -11,7 +11,8 @@ impl FooExt for Foo {
         self.bar
     }
 
-    fn baz(&self) -> &str {
+    #[allow(clippy::needless_lifetimes)]
+    fn baz<'a>(&'a self) -> &str {
         &self.baz
     }
 }

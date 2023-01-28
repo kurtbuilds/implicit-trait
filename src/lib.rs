@@ -1,5 +1,5 @@
 use proc_macro::TokenStream;
-use syn::{parse_macro_input, ItemImpl, ImplItem};
+use syn::{parse_macro_input, ItemImpl, ImplItem, Generics};
 use quote::quote;
 
 #[proc_macro_attribute]
@@ -9,11 +9,9 @@ pub fn implicit_trait(_args: TokenStream, input: TokenStream) -> TokenStream {
     let declarations = item.items.iter().map(|item| {
         match item {
             ImplItem::Method(method) => {
-                let name = &method.sig.ident;
-                let args = &method.sig.inputs;
-                let ret = &method.sig.output;
+                let sig = &method.sig;
                 quote! {
-                    fn #name(#args) #ret;
+                    fn #sig;
                 }
             }
             _ => panic!("Only methods are allowed in an implicit trait"),
