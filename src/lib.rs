@@ -11,7 +11,7 @@ pub fn implicit_trait(_args: TokenStream, input: TokenStream) -> TokenStream {
             ImplItem::Method(method) => {
                 let sig = &method.sig;
                 quote! {
-                    fn #sig;
+                    #sig;
                 }
             }
             _ => panic!("Only methods are allowed in an implicit trait"),
