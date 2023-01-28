@@ -1,5 +1,5 @@
 use proc_macro::TokenStream;
-use syn::{parse_macro_input, ItemImpl, ImplItem, Generics};
+use syn::{parse_macro_input, ItemImpl, ImplItem};
 use quote::quote;
 
 #[proc_macro_attribute]
