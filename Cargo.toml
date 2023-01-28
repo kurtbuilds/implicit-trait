@@ -11,6 +11,11 @@ description = "Add methods to foreign types with implicitly defined traits."
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
 proc_macro = true
+test = false
+
+[[test]]
+name = "tests"
+path = "tests/main.rs"
 
 [dependencies]
 proc-macro2 = { version = "1.0", features = ["span-locations"] }

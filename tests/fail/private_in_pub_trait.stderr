@@ -1,0 +1,10 @@
+error[E0446]: private type `Bar` in public interface
+ --> tests/fail/private_in_pub_trait.rs:8:1
+  |
+4 | pub(crate) struct Bar;
+  | --------------------- `Bar` declared as private
+...
+8 | #[implicit_trait(pub)]
+  | ^^^^^^^^^^^^^^^^^^^^^^ can't leak private type
+  |
+  = note: this error originates in the attribute macro `implicit_trait` (in Nightly builds, run with -Z macro-backtrace for more info)
