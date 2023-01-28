@@ -5,7 +5,7 @@ pub struct Foo {
     pub baz: String,
 }
 
-#[implicit_trait(pub)]
+#[implicit_trait]
 impl FooExt for Foo {
     fn bar(&self) -> i32 {
         self.bar
