@@ -2,6 +2,11 @@
 name = "implicit-trait"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/kurtbuilds/implicit-trait"
+homepage = "https://github.com/kurtbuilds/implicit-trait"
+documentation = "https://docs.rs/implicit-trait"
+license = "MIT"
+description = "Add methods to foreign types with implicitly defined traits."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
